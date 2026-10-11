@@ -1,0 +1,11 @@
+com\studentportal\model\Student.class
+com\studentportal\controller\FileServlet.class
+com\studentportal\controller\StudentServlet.class
+com\studentportal\dao\DBConnection.class
+com\studentportal\dao\StudentDAO.class
+com\studentportal\dao\UserDAO.class
+com\studentportal\filter\AuthFilter.class
+com\studentportal\model\StudentFile.class
+com\studentportal\controller\LogoutServlet.class
+com\studentportal\controller\LoginServlet.class
+com\studentportal\dao\FileDAO.class

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Student Admission Portal – Registration</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="banner">
+    <h1>🎓 Student Admission Portal</h1>
+    <p>Student Registration Form</p>
+  </div>
+  <main class="card">
+
+    <form id="regForm" novalidate>
+      <div class="grid">
+        <div class="field">
+          <label for="name">Full Name <span class="req">*</span></label>
+          <input id="name" type="text" placeholder="e.g. Priya Sharma" autocomplete="name">
+          <div class="error"></div>
+        </div>
+        <div class="field">
+          <label for="roll">Roll Number <span class="req">*</span></label>
+          <input id="roll" type="text" placeholder="e.g. 21CS1042">
+          <div class="error"></div>
+        </div>
+        <div class="field full">
+          <label for="email">Email Address <span class="req">*</span></label>
+          <input id="email" type="email" placeholder="you@example.com" autocomplete="email">
+          <div class="error"></div>
+        </div>
+        <div class="field full">
+          <label for="course">Course <span class="req">*</span></label>
+          <select id="course">
+            <option value="">-- Select a course --</option>
+            <option>B.E. Computer Science</option>
+            <option>B.E. Electronics &amp; Communication</option>
+            <option>B.E. Mechanical Engineering</option>
+            <option>B.Sc. Information Technology</option>
+            <option>BCA</option>
+            <option>MBA</option>
+            <option>MCA</option>
+          </select>
+          <div class="error"></div>
+        </div>
+        <div class="field">
+          <label for="password">Password <span class="req">*</span></label>
+          <input id="password" type="password" placeholder="Create a strong password" autocomplete="new-password">
+          <button type="button" class="toggle" data-target="password" aria-label="Show password">👁</button>
+          <div class="meter"><span id="bar"></span></div>
+          <div class="strength-text" id="strengthText">Use 8+ chars, upper, lower, number &amp; symbol</div>
+          <div class="error"></div>
+        </div>
+        <div class="field">
+          <label for="confirm">Confirm Password <span class="req">*</span></label>
+          <input id="confirm" type="password" placeholder="Re-enter password" autocomplete="new-password">
+          <button type="button" class="toggle" data-target="confirm" aria-label="Show password">👁</button>
+          <div class="error"></div>
+        </div>
+        <div class="field full">
+          <label for="file">Upload Marksheet / ID Proof <span class="req">*</span> <small style="font-weight:400;color:var(--muted)">(PDF, JPG, PNG · max 2 MB)</small></label>
+          <input id="file" type="file" accept=".pdf,.jpg,.jpeg,.png">
+          <div class="error"></div>
+        </div>
+      </div>
+      <div class="btns">
+        <button type="submit" class="btn primary">Register</button>
+        <button type="reset" class="btn secondary" id="resetBtn">Reset</button>
+      </div>
+    </form>
+
+    <div class="success" id="success">
+      <div class="tick">✅</div>
+      <h2>Registration Successful!</h2>
+      <p style="color:var(--muted)">Your details have been validated.</p>
+      <table id="summary"></table>
+      <div class="btns"><button class="btn primary" id="again">Register Another Student</button></div>
+    </div>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
